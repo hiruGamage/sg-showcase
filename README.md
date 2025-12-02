@@ -1,8 +1,8 @@
-# 🌐 BYSG.UK
+# 🌐 SGamage.Site
 
 My official **portfolio website** built to showcase my creative projects, designs, and digital work.  
 
-🔗 **Live Site:** [https://bysg.uk](https://bysg.uk)  
+🔗 **Live Site:** [https://SGamage.site](https://SGamage.site
 📝 **Blog:** [https://justhiruu.t.me](https://justhiruu.t.me)
 
 ---

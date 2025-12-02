@@ -2,7 +2,7 @@
 
 My official **portfolio website** built to showcase my creative projects, designs, and digital work.  
 
-🔗 **Live Site:** [https://SGamage.site](https://SGamage.site
+🔗 **Live Site:** [https://SGamage.site](https://SGamage.site)
 📝 **Blog:** [https://justhiruu.t.me](https://justhiruu.t.me)
 
 ---

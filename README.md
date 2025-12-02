@@ -26,4 +26,4 @@ It includes my latest creative work, social links, and contact info.
 
 ---
 
-© 2025 **BYSG.UK** — All rights reserved.
+© 2025 **SGamage.site** — All rights reserved.

@@ -1,9 +1,8 @@
 # 🌐 SGamage.Site
 
 My official **portfolio website** built to showcase my creative projects, designs, and digital work.  
-
-**Live Site:** [LIVE ](https://SGamage.site)   
-**Blog:** [Blog ](https://justhiruu.t.me)
+**🌐 Live Portfolio:** [SGamage](https://SGamage.site)  
+**📝 Blog / Updates:** [JustHiruu on Telegram](https://justhiruu.t.me)
 
 ---
 

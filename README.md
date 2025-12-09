@@ -22,7 +22,7 @@ It includes my latest creative work, social links, and contact info.
 
 ## 👤 Author
 **Hiru**  
-📩 Contact: [https://lilxhiruu.t.me](https://lilxhiruu.t.me)
+📩 Contact: [HIRUU](https://lilxhiruu.t.me)
 
 ---
 

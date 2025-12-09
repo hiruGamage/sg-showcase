@@ -297,7 +297,7 @@ body {
   width: 70%;
 }
 .skills-column:nth-child(2) .skills-box .progress:nth-child(5) .bar span {
-  width: 35%;
+  width: 25%;
 }
 .project {
   background: var(--second-bg-color);

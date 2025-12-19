@@ -174,123 +174,121 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-  /* ID-specific styling to prevent affecting the rest of sgamage.site */
-  #sg-stats-wrapper {
+  /* Root Container - Centered on web */
+  #sg-stats-section {
     width: 100%;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    background-color: transparent; /* Fits into your existing background */
+    max-width: 1000px; /* Limits width on PC */
+    margin: 40px auto; /* Centers the whole block */
+    padding: 0 15px;
+    box-sizing: border-box;
   }
 
-  .stats-card {
-    background: linear-gradient(145deg, #162a5a, #1a3673);
-    border-radius: 20px;
-    padding: 30px;
-    width: 90%;
-    max-width: 1100px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  /* The main "Big Square" holding the 4 small ones */
+  .sg-main-card {
+    background: #1a2a4d; /* Solid professional dark blue */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   }
 
-  .stats-grid {
+  /* Grid Logic */
+  .sg-grid {
     display: grid;
-    gap: 15px;
-    /* Default: Mobile 2x2 Square */
-    grid-template-columns: 1fr 1fr; 
+    /* Mobile: 2x2 perfectly equal squares */
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr; /* Forces equal height */
+    gap: 12px;
   }
 
-  .stat-box {
+  /* The 4 Small Squares */
+  .sg-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* The 'mini square' border */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Mini border */
     border-radius: 12px;
-    text-align: center;
-    transition: 0.3s;
+    aspect-ratio: 1 / 1; /* Makes them perfect squares on mobile */
   }
 
-  .stat-box:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-
-  /* Icons styling */
-  .stat-box i {
+  /* Icon Style */
+  .sg-box i {
     font-size: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
-  .c-exp { color: #4fc3f7; }  /* Experience Color */
-  .c-proj { color: #ce93d8; } /* Project Color */
-  .c-ui { color: #81c784; }   /* UI Color */
-  .c-sat { color: #ffd54f; }  /* Satisfaction Color */
+  .blue-ic { color: #4fc3f7; }
+  .purp-ic { color: #ce93d8; }
+  .gren-ic { color: #81c784; }
+  .gold-ic { color: #ffd54f; }
 
-  .stat-val {
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
+  /* Text Style */
+  .sg-num {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff !important;
     margin: 0;
+    font-family: sans-serif;
   }
 
-  .stat-label {
-    font-family: 'Arial', sans-serif;
-    font-size: 12px;
-    color: #b0bec5;
-    margin-top: 4px;
+  .sg-lab {
+    font-size: 11px;
+    color: #a0aec0 !important;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    font-family: sans-serif;
   }
 
-  /* Responsive Logic */
+  /* PC: Row Type Layout */
   @media (min-width: 768px) {
-    .stats-grid {
-      /* PC: Single Row (Column style) */
-      grid-template-columns: repeat(4, 1fr); 
-      gap: 30px;
+    .sg-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 in a row */
     }
-    .stat-box {
-      border: none; /* Cleaner on PC, borders look better on mobile */
+    .sg-box {
+      aspect-ratio: auto; /* Remove square shape for row style */
+      padding: 30px 10px;
+      border: none;
       border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0;
     }
-    .stat-box:first-child { border-left: none; }
-    .stat-val { font-size: 24px; }
+    .sg-box:first-child { border-left: none; }
+    .sg-num { font-size: 22px; }
   }
 </style>
 
-<div id="sg-stats-wrapper">
-  <div class="stats-card">
-    <div class="stats-grid">
+<div id="sg-stats-section">
+  <div class="sg-main-card">
+    <div class="sg-grid">
       
-      <div class="stat-box">
-        <i class="fa fa-briefcase c-exp"></i>
-        <p class="stat-val">3+ Years</p>
-        <p class="stat-label">Experience</p>
+      <div class="sg-box">
+        <i class="fa fa-briefcase blue-ic"></i>
+        <p class="sg-num">3+ Years</p>
+        <p class="sg-lab">Experience</p>
       </div>
 
-      <div class="stat-box">
-        <i class="fa fa-code c-proj"></i>
-        <p class="stat-val">12+ Projects</p>
-        <p class="stat-label">Work Done</p>
+      <div class="sg-box">
+        <i class="fa fa-code purp-ic"></i>
+        <p class="sg-num">12+ Projects</p>
+        <p class="sg-lab">Projects</p>
       </div>
 
-      <div class="stat-box">
-        <i class="fa fa-paint-brush c-ui"></i>
-        <p class="stat-val">7</p>
-        <p class="stat-label">UI Designs</p>
+      <div class="sg-box">
+        <i class="fa fa-paint-brush gren-ic"></i>
+        <p class="sg-num">7</p>
+        <p class="sg-lab">UI Designs</p>
       </div>
 
-      <div class="stat-box">
-        <i class="fa fa-smile-o c-sat"></i>
-        <p class="stat-val">97%</p>
-        <p class="stat-label">Satisfaction</p>
+      <div class="sg-box">
+        <i class="fa fa-certificate gold-ic"></i>
+        <p class="sg-num">97%</p>
+        <p class="sg-lab">Satisfaction</p>
       </div>
 
     </div>
   </div>
 </div>
-
 
 <!--end-->
             <a href="https://t.me/JustHiruu/6" class="btn">Read More</a>

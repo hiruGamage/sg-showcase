@@ -170,6 +170,7 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
           </ul>
           <p><strong>OWNER Of </strong><a href="https://t.me/JustHiruu/10" style="color:#00e6ff;">Paradise Team on Telegram</a></p>
 <!--projectcard-->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -180,21 +181,20 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
     }
     
     .stats-grid {
-        display: grid;
-        gap: 15px;
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
     
     .stats-square {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 12px;
-        background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
-        border-radius: 16px;
+        gap: 15px;
+        width: 100%;
+        max-width: 400px;
         padding: 20px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        border: 1px solid #333;
     }
     
     .stat-box {
@@ -202,119 +202,103 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 18px 12px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        border: 1px solid #444;
+        padding: 15px;
         text-align: center;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-    }
-    
-    .stat-box:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        background: rgba(255, 255, 255, 0.1);
-        border-color: #666;
     }
     
     .stat-box .icon {
         font-size: 24px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         color: #4dabf7;
     }
     
     .stat-box .number {
-        font-size: 26px;
+        font-size: 28px;
         font-weight: 700;
-        line-height: 1.2;
+        line-height: 1;
         margin-bottom: 4px;
-        background: linear-gradient(90deg, #4dabf7, #339af0);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #2b2d42;
     }
     
     .stat-box .label {
         font-size: 14px;
-        color: #adb5bd;
+        color: #6c757d;
         font-weight: 500;
     }
     
-    /* Desktop Layout - Column with center alignment */
+    /* Desktop Layout - 4 Columns Centered */
     @media (min-width: 768px) {
-        .stats-grid {
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            align-items: center;
-            justify-items: center;
-        }
-        
         .stats-square {
-            display: contents;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            max-width: 100%;
+            padding: 0;
         }
         
         .stat-box {
-            width: 100%;
-            max-width: 220px;
-            padding: 30px 20px;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            min-width: 150px;
+            padding: 20px;
         }
         
         .stat-box .icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .stat-box .number {
             font-size: 32px;
         }
         
-        .stat-box .number {
-            font-size: 36px;
-        }
-        
         .stat-box .label {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
     
-    /* Mobile square optimization */
-    @media (max-width: 480px) {
-        .stats-square {
-            padding: 15px;
-            gap: 10px;
-            border-radius: 12px;
-        }
-        
+    /* Mobile: Remove mini square lines/borders */
+    @media (max-width: 767px) {
         .stat-box {
-            padding: 15px 8px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
         }
         
-        .stat-box .icon {
-            font-size: 20px;
+        .stat-box:hover {
+            transform: none;
+            box-shadow: none;
+            background: transparent;
         }
         
-        .stat-box .number {
-            font-size: 22px;
-        }
-        
-        .stat-box .label {
-            font-size: 12px;
+        .stats-square {
+            background: transparent;
+            border: none;
+            box-shadow: none;
         }
     }
     
     /* Extra small devices */
-    @media (max-width: 360px) {
+    @media (max-width: 480px) {
         .stats-square {
-            padding: 12px;
-            gap: 8px;
+            gap: 10px;
+            padding: 15px;
         }
         
         .stat-box {
-            padding: 12px 6px;
+            padding: 12px;
+        }
+        
+        .stat-box .icon {
+            font-size: 22px;
         }
         
         .stat-box .number {
-            font-size: 20px;
+            font-size: 24px;
+        }
+        
+        .stat-box .label {
+            font-size: 13px;
         }
     }
 </style>
@@ -360,6 +344,7 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         </div>
     </div>
 </div>
+
 <!--end-->
             <a href="https://t.me/JustHiruu/6" class="btn">Read More</a>
         </div>

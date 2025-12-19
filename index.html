@@ -196,6 +196,7 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         width: 100%;
         max-width: 400px;
         padding: 20px;
+        animation: fadeInUp 0.6s ease-out;
     }
     
     .stat-box {
@@ -227,6 +228,18 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         font-weight: 500;
     }
     
+    /* Animation for mobile */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
     /* Desktop Layout - 4 Columns with square borders */
     @media (min-width: 768px) {
         .stats-square {
@@ -237,6 +250,7 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
             gap: 30px;
             max-width: 100%;
             padding: 0;
+            animation: none;
         }
         
         .stat-box {
@@ -270,8 +284,16 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         }
     }
     
-    /* Mobile: No square lines/borders */
+    /* Mobile: Main square with border, no mini squares */
     @media (max-width: 767px) {
+        .stats-square {
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
         .stat-box {
             border: none;
             background: transparent;
@@ -284,10 +306,18 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
             background: transparent;
         }
         
-        .stats-square {
-            background: transparent;
-            border: none;
-            box-shadow: none;
+        /* Add a subtle pulse animation to icons on mobile */
+        .stat-box .icon {
+            animation: iconPulse 2s infinite;
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
     }
     
@@ -296,6 +326,7 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         .stats-square {
             gap: 10px;
             padding: 15px;
+            border-radius: 14px;
         }
         
         .stat-box {

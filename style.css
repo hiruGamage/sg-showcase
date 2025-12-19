@@ -228,22 +228,66 @@ body {
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
 }
-/* STATS */
+/* STATS SECTION */
+.stats-section {
+  padding: 2rem 0;
+}
+
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 3rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
+
 .stat-item {
-  background: rgba(255,255,255,0.06);
-  padding: 3rem;
-  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 1rem;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .stat-item h4 {
-  font-size: 4rem;
-  color: var(--main-color);
+  font-size: 2.5rem;
+  color: #4a6cf7;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .stat-item {
+    padding: 1.5rem;
+  }
+  
+  .stat-item h4 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    padding: 1.2rem;
+  }
+  
+  .stat-item h4 {
+    font-size: 1.8rem;
+  }
 }
 /* skills */
 .skills {

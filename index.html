@@ -174,110 +174,104 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-  :root {
-    --bg-color: #1a3673; /* Deep blue like your image */
-    --accent-color: #ffffff;
-    --text-muted: #d1d9e6;
-  }
-
-  .stats-container {
+  /* Everything is prefixed with #sg-stats-section to protect your other pages */
+  #sg-stats-section {
+    --stat-bg: #1a3673; 
+    --stat-text: #ffffff;
+    --stat-border: rgba(255, 255, 255, 0.15);
+    
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    padding: 40px 20px;
-    border-radius: 20px;
-    max-width: 1000px;
-    margin: 20px auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    max-width: 95%; /* Better fit for sgamage.site mobile */
+    margin: 10px auto;
+    font-family: sans-serif;
+    box-sizing: border-box;
   }
 
-  .stats-grid {
+  #sg-stats-section .sg-grid {
     display: grid;
-    /* Default: 2x2 square for mobile */
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px;
-    text-align: center;
+    /* Mobile: 2x2 Square */
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
 
-  .stat-item {
-    padding: 20px 10px;
+  #sg-stats-section .sg-item {
+    padding: 20px 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border requested */
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+    border: 1px solid var(--stat-border); /* Small border requested */
+    border-radius: 12px;
+    text-align: center;
   }
 
-  .stat-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.05);
+  /* Icon Colors */
+  #sg-stats-section .sg-item i {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  #sg-stats-section .exp-icon { color: #4fc3f7; }
+  #sg-stats-section .proj-icon { color: #ce93d8; }
+  #sg-stats-section .ui-icon { color: #81c784; }
+  #sg-stats-section .sat-icon { color: #ffd54f; }
+
+  #sg-stats-section .sg-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff !important; /* Forces white text only here */
+    margin: 0;
   }
 
-  .stat-item i {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+  #sg-stats-section .sg-label {
+    font-size: 13px;
+    color: #d1d9e6 !important;
+    margin-top: 5px;
   }
 
-  /* Specific Icon Colors from your image */
-  .icon-blue { color: #4fc3f7; }
-  .icon-purple { color: #ce93d8; }
-  .icon-green { color: #81c784; }
-  .icon-gold { color: #ffd54f; }
-
-  .stat-number {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .stat-label {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    text-transform: capitalize;
-  }
-
-  /* Responsive: PC View (Single Row / Column Layout) */
+  /* PC Layout: Changes from 2x2 to a single row */
   @media (min-width: 768px) {
-    .stats-grid {
-      grid-template-columns: repeat(4, 1fr); /* 4 items in one line */
+    #sg-stats-section .sg-grid {
+      grid-template-columns: repeat(4, 1fr);
     }
-    
-    .stat-item {
-      border: none; /* Cleaner look on desktop */
+    #sg-stats-section {
+      max-width: 900px;
+      padding: 20px;
     }
   }
 </style>
 
-<div class="stats-container">
-  <div class="stats-grid">
+<div id="sg-stats-section">
+  <div class="sg-grid">
     
-    <div class="stat-item">
-      <i class="fa fa-briefcase icon-blue" aria-hidden="true"></i>
-      <div class="stat-number">3+ Years</div>
-      <div class="stat-label">Experience</div>
+    <div class="sg-item">
+      <i class="fa fa-briefcase exp-icon"></i>
+      <p class="sg-num">3+ Years</p>
+      <p class="sg-label">Experience</p>
     </div>
 
-    <div class="stat-item">
-      <i class="fa fa-code icon-purple" aria-hidden="true"></i>
-      <div class="stat-number">12+</div>
-      <div class="stat-label">Projects</div>
+    <div class="sg-item">
+      <i class="fa fa-code proj-icon"></i>
+      <p class="sg-num">12+ Projects</p>
+      <p class="sg-label">Work Done</p>
     </div>
 
-    <div class="stat-item">
-      <i class="fa fa-paint-brush icon-green" aria-hidden="true"></i>
-      <div class="stat-number">7</div>
-      <div class="stat-label">UI Designs</div>
+    <div class="sg-item">
+      <i class="fa fa-paint-brush ui-icon"></i>
+      <p class="sg-num">7 Designs</p>
+      <p class="sg-label">UI Designs</p>
     </div>
 
-    <div class="stat-item">
-      <i class="fa fa-certificate icon-gold" aria-hidden="true"></i>
-      <div class="stat-number">97%</div>
-      <div class="stat-label">Satisfaction</div>
+    <div class="sg-item">
+      <i class="fa fa-heart sat-icon"></i>
+      <p class="sg-num">97%</p>
+      <p class="sg-label">Satisfaction</p>
     </div>
 
   </div>
 </div>
+
 <!--end-->
             <a href="https://t.me/JustHiruu/6" class="btn">Read More</a>
         </div>

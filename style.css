@@ -228,6 +228,23 @@ body {
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
 }
+/* STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.stat-item {
+  background: rgba(255,255,255,0.06);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+.stat-item h4 {
+  font-size: 4rem;
+  color: var(--main-color);
+}
 /* skills */
 .skills {
   padding-bottom: 7rem;

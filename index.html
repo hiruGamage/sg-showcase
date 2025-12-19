@@ -169,6 +169,7 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
             <li>Universal Applications Web Site Designer & Developer</li>
           </ul>
           <p><strong>OWNER Of </strong><a href="https://t.me/JustHiruu/10" style="color:#00e6ff;">Paradise Team on Telegram</a></p>
+
 <!--projectcard-->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -178,13 +179,13 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
+        color: white;
     }
     
     .stats-grid {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
     }
     
     .stats-square {
@@ -217,16 +218,16 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         font-weight: 700;
         line-height: 1;
         margin-bottom: 4px;
-        color: #2b2d42;
+        color: white;
     }
     
     .stat-box .label {
         font-size: 14px;
-        color: #6c757d;
+        color: #e9ecef;
         font-weight: 500;
     }
     
-    /* Desktop Layout - 4 Columns Centered */
+    /* Desktop Layout - 4 Columns with square borders */
     @media (min-width: 768px) {
         .stats-square {
             display: flex;
@@ -239,25 +240,37 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
         }
         
         .stat-box {
-            min-width: 150px;
-            padding: 20px;
+            min-width: 180px;
+            padding: 30px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            border-color: #4dabf7;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.3);
         }
         
         .stat-box .icon {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 32px;
+            margin-bottom: 12px;
         }
         
         .stat-box .number {
-            font-size: 32px;
+            font-size: 36px;
         }
         
         .stat-box .label {
-            font-size: 15px;
+            font-size: 16px;
         }
     }
     
-    /* Mobile: Remove mini square lines/borders */
+    /* Mobile: No square lines/borders */
     @media (max-width: 767px) {
         .stat-box {
             border: none;

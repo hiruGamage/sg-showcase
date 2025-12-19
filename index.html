@@ -1,118 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="icons8-coding-96.png"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+      <!-- Basic SEO -->
+<title>SahasGamage's Personal Portfolio</title>
+<meta name="description" content="Sahas Gamage's Personal Portfolio - web Developer,Graphic Designer, Database Manager">
+<meta name="keywords" content="S Gamage,Sahasvihanga,lilhiruu, sgamage site, web developer Sri Lanka, portfolio website, UI UX designer, creative designer, Sahas Gamage, hiru gamage, developer Sri Lanka">
 
-  <title>Sahas Gamage | Portfolio</title>
-  <meta name="description" content="Sahas Gamage – Web Developer & Software Engineer in training from Sri Lanka.">
+<!-- Author -->
+<meta name="author" content="Sahas Gamage">
 
-  <!-- Icons & Fonts -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Robots -->
+<meta name="robots" content="index, follow">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<!-- Open Graph (for Facebook, Instagram, LinkedIn) -->
+<meta property="og:title" content="Sahas Gamage - Personal Portfolio">
+<meta property="og:description" content="web Developer,Graphic Designer, Database Manager & Backend Developer. Explore my projects, skills, and latest updates.">
+<meta property="og:type" content="website">
+ <meta property="og:url" content="https://sgamage.site"> 
+    
+<!-- <meta property="og:image" content="https://sgamage.site/preview.png">
+<meta property="og:url" content="https://Hirugamage.github.io" />  -->
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sahas Gamage - Personal Portfolio">
+<meta name="twitter:description" content="web Developer,Graphic Designer, Database Manager & Backend Developer.">
+<!-- <meta name="twitter:image" content="https://sgamage.site/preview.png">  -->
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://sgamage.site">
+      <!-- Favicon (ICO) -->
+<link rel="icon" href="https://sgamage.site/favicon.ico" sizes="any">
+
+<!-- Favicon (PNG) -->
+<link rel="icon" type="image/png" href="https://sgamage.site/favicon.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" href="https://sgamage.site/meh.jpeg">
+
+<!-- OG / Social Share Image (Cover Pic) -->
+<meta property="og:image" content="https://sgamage.site/meh.jpeg">
+<meta name="twitter:image" content="https://sgamage.site/meh.jpeg">
+  <!--my edit--->
+      
+    <!-- boxIcons -->
+    <link rel="icon" type= "image/jpg" href= "c4.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<script>
+  // Disable right-click
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  document.addEventListener("keydown", function (e) {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || // Ctrl+Shift+I/J
+      (e.ctrlKey && e.key === 'U') // Ctrl+U
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+
+
+<script src="https://cdn.lordicon.com/lordicon.js"></script>  
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
+    <!-- header -->
+    <header class="header">
+        <a href="#" class="logo">
+            <lord-icon
+    src="https://cdn.lordicon.com/ipbtscff.json"
+    trigger="loop"
+    delay="500"
+    stroke="bold"
+    style="width:60px;height:60px"
+    class="load-icon"
+    >
+</lord-icon>
+SahaS GaMAGE</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+          <!--  <a href="#contact">Contact</a>   -->
+        </nav>
+    </header>
 
-<header class="header">
-  <a href="#" class="logo">
-    <lord-icon src="https://cdn.lordicon.com/ipbtscff.json" trigger="loop" style="width:50px;height:50px"></lord-icon>
-    Sahas
-  </a>
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I'am</h3>
+            <h1>Sahas Gamage</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+      <p>Aspiring <strong>Software Engineer</strong> passionate about <strong>coding</strong> and <strong>problem solving</strong>.
+Dedicated to <strong>learning, adapting, and creating innovative tech solutions</strong>.I believe that <strong>attitude</strong> is a small thing that makes a big difference.</p>
 
-  <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- Updated Telegram button -->
+            <a href=https://t.me/lilxhiruu?text=Hey%20Hiru:%20via%20your%20portfolio." class="btn" target="_blank">Telegram</a>
+            <a href="https://linktr.ee/sahasgamage" class="btn" target="_blank">Linktr.ee</a>
 
-  <nav class="navbar">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-  </nav>
-</header>
+        </div>
+        <div class="social-media-icon">
+            <a href="https://www.youtube.com/@xhiruu1"><i class="bx bxl-youtube"></i></a>
+            <a href="https://t.me/JustHiruu"><i class="bx bxl-telegram"></i></a>
+            <a href="https://github.com/hiruGamage"><i class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/_.hi.ru_"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/sahas-gamage-999064399"><i class='bx bxl-linkedin'></i></a>
+            
+        </div>
+        <div class="home-img">
+            <img src="godzilla-kawwagifmaker.com.gif.gif">
+        </div>
+    </section>
 
-<section class="home" id="home">
-  <div class="home-content">
-    <h3>Hello, I'm</h3>
-    <h1>Sahas Gamage</h1>
-    <h3>And I'm a <span class="text"></span></h3>
-    <p>Aspiring Software Engineer passionate about modern web development.</p>
+    <!-- About • -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading about-icon">
+                <lord-icon
+                src="https://cdn.lordicon.com/lhzhnixi.json"
+                trigger="loop"
+                delay="1500"
+                stroke="bold"
+                colors="primary:#ffffff,secondary:#16c72e"
+                style="width:50px;height:50px"
 
-    <a href="https://t.me/lilxhiruu?text=Hey%20Hiru%20via%20your%20portfolio" class="btn" target="_blank">Telegram</a>
-    <a href="https://linktr.ee/sahasgamage" class="btn" target="_blank">Linktree</a>
+                >
+            </lord-icon>
+   Itz<span>Meh </span></h2>
+            <h3>Frontend Developer</h3>
+            <h3></h3>
+            <p>I’m <strong>Sahas Vihanga</strong> from <strong>Tangalle, Sri Lanka</strong>,  
+an <strong>A/L Technology student </strong> and <strong>Full Stack Developer in training</strong>,  
+dedicated to creating <strong>modern, clean, and visually engaging web experiences</strong>.</p>
 
-    <div class="social-media-icon">
-      <a href="#"><i class="bx bxl-github"></i></a>
-      <a href="#"><i class="bx bxl-telegram"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-    </div>
-  </div>
+                 <h3>Skills</h3> 
+                 <ul>
+                    <li>Programmer</li>
+                    <li>Logo Designer</li>
+                    <li>Web App Developer</li>
+                    <li>Video/Photo Editor </li>
+                    <li>Arduion Programmer & Developer</li>
+                    <li>Develop Any Application For Any Platform </li>
 
-  <div class="home-img">
-    <img src="meh.jpeg" alt="Profile">
-  </div>
-</section>
+                  <p><strong>Ambition :</strong> Be a Developer</p>
 
-<section class="about" id="about">
-  <div class="about-content">
-    <h2 class="heading">About <span>Me</span></h2>
-    <p>Full Stack Developer in training from Sri Lanka.</p>
+          <h3>Programming Platforms </h3> 
+          <ul>
+            <li>Windows</li>
+            <li>Android </li>
+            <li>IOS</li>
+            <li>Telegram BOTS</li>
+            <li>Scripts</li>
+            <li>Universal Applications Web Site Designer & Developer</li>
+          </ul>
+          <p><strong>OWNER Of </strong><a href="https://t.me/JustHiruu/10" style="color:#00e6ff;">Paradise Team on Telegram</a></p>
 
-    <div class="stats-section">
-      <div class="stats-grid">
-        <div class="stat-item"><h4>50+</h4><p>Projects</p></div>
-        <div class="stat-item"><h4>3+</h4><p>Years</p></div>
-        <div class="stat-item"><h4>100%</h4><p>Satisfaction</p></div>
-        <div class="stat-item"><h4>24/7</h4><p>Available</p></div>
-      </div>
-    </div>
-  </div>
+            <a href="https://t.me/JustHiruu/6" class="btn">Read More</a>
+        </div>
+        <div class="about-img">
+            <img src="meh.jpeg" alt="">
+        </div>
+    </section>
 
-  <div class="about-img">
-    <img src="meh.jpeg" alt="About">
-  </div>
-</section>
+    <!-- skills -->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+                <div class="skills-box">
+                    <div class="progress">
+                        <h3><i class="bx bxl-html5 icon-skills"></i>HTML <span>90%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3><i class="bx bxl-css3"></i>CSS <span>85%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3><i class="bx bxl-python"></i>Python <span>65%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3><i class="bx bxl-php"></i>PHP <span>45%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3><i class="bx bxl-javascript"></i>Java Script <span>30%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+                <div class="skills-box">
+                    <div class="progress">
+                        <h3>Community managing<span>95%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                     <div class="progress">
+                        <h3>Web Development<span>85%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Web Design<span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>Graphic Design<span>70%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="progress">
+                        <h3>SEO Marketing <span>35%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact  --
+    <section class="contact" id="contact">
+        <h2 class="heading contact-icon">
+            <lord-icon
+            src="https://cdn.lordicon.com/wzrwaorf.json"
+            trigger="loop"
+            stroke="bold"
+            colors="primary:#ffffff,secondary:#16c72e"
+            style="width:40px;height:40px"
+            class="lord_icon_2"
+            >
+        </lord-icon>
+            Contact <span> Me  </span> </h2>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Mobile Number" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea cols="30" rows="10" placeholder="Your Massage" required></textarea>
+            </div>
+            <a href="#" class="btn">Submit</a>
+        </form>
+    </section>
+-->
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="footer-icon-top">
+            <a href="#home"><i class="bx bx-upvote"></i></a>
+        </div>
+        <div class="footer-text">
+            <p> &copy; 2025 SGamage.Site | All Rights Reserved.</p>
+<p>• Designed & Developed by <span> Lil </span> Hiruu.</p>
+        </div>
 
-<section class="skills" id="skills">
-  <h2 class="heading">My <span>Skills</span></h2>
+    </footer>
 
-  <div class="skills-row">
-    <div class="skills-column">
-      <h3 class="title">Coding</h3>
-      <div class="progress">
-        <h3>HTML <span>90%</span></h3>
-        <div class="bar"><span style="width:90%"></span></div>
-      </div>
-      <div class="progress">
-        <h3>CSS <span>85%</span></h3>
-        <div class="bar"><span style="width:85%"></span></div>
-      </div>
-    </div>
+    <!-- scrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- typed.js  -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <div class="skills-column">
-      <h3 class="title">Professional</h3>
-      <div class="progress">
-        <h3>Web Development <span>85%</span></h3>
-        <div class="bar"><span style="width:85%"></span></div>
-      </div>
-      <div class="progress">
-        <h3>Design <span>80%</span></h3>
-        <div class="bar"><span style="width:80%"></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>© 2025 SGamage.site</p>
-  <p>Designed & Developed by <span>Lil Hiruu</span></p>
-</footer>
-
-<!-- JS -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
+<script type='text/javascript'> 
+    document.addEventListener('contextmenu', event => event.preventDefault()); 
+    </script>
+</body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

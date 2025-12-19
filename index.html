@@ -171,35 +171,113 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
           <p><strong>OWNER Of </strong><a href="https://t.me/JustHiruu/10" style="color:#00e6ff;">Paradise Team on Telegram</a></p>
 <!--projectcard-->
 <!-- STATS SECTION -->
-<section class="stats-box">
-  <div class="stats-container">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div class="stat">
-      <i class="fa fa-briefcase"></i>
-      <h3>3+</h3>
-      <p>Experience</p>
+<style>
+  :root {
+    --bg-color: #1a3673; /* Deep blue like your image */
+    --accent-color: #ffffff;
+    --text-muted: #d1d9e6;
+  }
+
+  .stats-container {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 40px 20px;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+
+  .stats-grid {
+    display: grid;
+    /* Default: 2x2 square for mobile */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    text-align: center;
+  }
+
+  .stat-item {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border requested */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-item i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  /* Specific Icon Colors from your image */
+  .icon-blue { color: #4fc3f7; }
+  .icon-purple { color: #ce93d8; }
+  .icon-green { color: #81c784; }
+  .icon-gold { color: #ffd54f; }
+
+  .stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: capitalize;
+  }
+
+  /* Responsive: PC View (Single Row / Column Layout) */
+  @media (min-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 items in one line */
+    }
+    
+    .stat-item {
+      border: none; /* Cleaner look on desktop */
+    }
+  }
+</style>
+
+<div class="stats-container">
+  <div class="stats-grid">
+    
+    <div class="stat-item">
+      <i class="fa fa-briefcase icon-blue" aria-hidden="true"></i>
+      <div class="stat-number">3+ Years</div>
+      <div class="stat-label">Experience</div>
     </div>
 
-    <div class="stat">
-      <i class="fa fa-code"></i>
-      <h3>12+</h3>
-      <p>Projects</p>
+    <div class="stat-item">
+      <i class="fa fa-code icon-purple" aria-hidden="true"></i>
+      <div class="stat-number">12+</div>
+      <div class="stat-label">Projects</div>
     </div>
 
-    <div class="stat">
-      <i class="fa fa-paint-brush"></i>
-      <h3>7</h3>
-      <p>UI Designs</p>
+    <div class="stat-item">
+      <i class="fa fa-paint-brush icon-green" aria-hidden="true"></i>
+      <div class="stat-number">7</div>
+      <div class="stat-label">UI Designs</div>
     </div>
 
-    <div class="stat">
-      <i class="fa fa-star"></i>
-      <h3>97%</h3>
-      <p>Satisfaction</p>
+    <div class="stat-item">
+      <i class="fa fa-certificate icon-gold" aria-hidden="true"></i>
+      <div class="stat-number">97%</div>
+      <div class="stat-label">Satisfaction</div>
     </div>
 
   </div>
-</section>
+</div>
 <!--end-->
             <a href="https://t.me/JustHiruu/6" class="btn">Read More</a>
         </div>

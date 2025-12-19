@@ -228,6 +228,46 @@ body {
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
 }
+/* Stats Section */
+.stats-section {
+    background: var(--bg-color);
+    padding: 6rem 9%;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+}
+
+.stat-item h4 {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.stat-item p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
 /* skills */
 .skills {
   padding-bottom: 7rem;

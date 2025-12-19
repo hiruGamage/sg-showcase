@@ -174,116 +174,111 @@ dedicated to creating <strong>modern, clean, and visually engaging web experienc
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-  /* Root Container - Centered on web */
-  #sg-stats-section {
+  /* 1. Reset & Layout - Centers on PC, full width on Mobile */
+  #sg-stats-container {
     width: 100%;
-    max-width: 1000px; /* Limits width on PC */
-    margin: 40px auto; /* Centers the whole block */
-    padding: 0 15px;
+    max-width: 1000px; 
+    margin: 20px auto;
+    padding: 0 10px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
   }
 
-  /* The main "Big Square" holding the 4 small ones */
-  .sg-main-card {
-    background: #1a2a4d; /* Solid professional dark blue */
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  /* 2. The Main Shell */
+  .sg-card {
+    background: #101d3a; /* Dark professional blue */
+    border-radius: 12px;
+    padding: 15px;
   }
 
-  /* Grid Logic */
-  .sg-grid {
+  /* 3. The Grid - Changes based on device */
+  .sg-grid-wrapper {
     display: grid;
-    /* Mobile: 2x2 perfectly equal squares */
+    /* Mobile: 2x2 equal squares */
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr; /* Forces equal height */
-    gap: 12px;
+    gap: 10px;
   }
 
-  /* The 4 Small Squares */
-  .sg-box {
+  /* 4. Individual Small Squares */
+  .sg-item-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Mini border */
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 10px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Mini border */
-    border-radius: 12px;
-    aspect-ratio: 1 / 1; /* Makes them perfect squares on mobile */
+    padding: 15px 5px;
+    text-align: center;
+    aspect-ratio: 1 / 1; /* Keeps mobile boxes perfectly square */
   }
 
-  /* Icon Style */
-  .sg-box i {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-  .blue-ic { color: #4fc3f7; }
-  .purp-ic { color: #ce93d8; }
-  .gren-ic { color: #81c784; }
-  .gold-ic { color: #ffd54f; }
+  /* Icon Colors */
+  .sg-item-box i { font-size: 22px; margin-bottom: 8px; }
+  .c-1 { color: #4fc3f7; }
+  .c-2 { color: #ce93d8; }
+  .c-3 { color: #81c784; }
+  .c-4 { color: #ffd54f; }
 
-  /* Text Style */
-  .sg-num {
+  /* Text Styling */
+  .sg-val {
+    color: #ffffff !important;
     font-size: 18px;
     font-weight: 700;
-    color: #ffffff !important;
     margin: 0;
-    font-family: sans-serif;
   }
-
-  .sg-lab {
+  .sg-label {
+    color: #94a3b8 !important;
     font-size: 11px;
-    color: #a0aec0 !important;
+    margin-top: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-top: 4px;
-    font-family: sans-serif;
   }
 
-  /* PC: Row Type Layout */
+  /* 5. PC / Desktop Mode: Row Type */
   @media (min-width: 768px) {
-    .sg-grid {
-      grid-template-columns: repeat(4, 1fr); /* 4 in a row */
+    .sg-grid-wrapper {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns in one row */
+      gap: 0; /* Remove gaps for a seamless row look */
     }
-    .sg-box {
-      aspect-ratio: auto; /* Remove square shape for row style */
-      padding: 30px 10px;
+    .sg-item-box {
+      aspect-ratio: auto; /* Remove square shape for row */
       border: none;
-      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 0;
+      padding: 20px 10px;
     }
-    .sg-box:first-child { border-left: none; }
-    .sg-num { font-size: 22px; }
+    .sg-item-box:last-child { border-right: none; }
+    .sg-val { font-size: 22px; }
   }
 </style>
 
-<div id="sg-stats-section">
-  <div class="sg-main-card">
-    <div class="sg-grid">
+<div id="sg-stats-container">
+  <div class="sg-card">
+    <div class="sg-grid-wrapper">
       
-      <div class="sg-box">
-        <i class="fa fa-briefcase blue-ic"></i>
-        <p class="sg-num">3+ Years</p>
-        <p class="sg-lab">Experience</p>
+      <div class="sg-item-box">
+        <i class="fa fa-briefcase c-1"></i>
+        <p class="sg-val">3+ Years</p>
+        <p class="sg-label">Experience</p>
       </div>
 
-      <div class="sg-box">
-        <i class="fa fa-code purp-ic"></i>
-        <p class="sg-num">12+ Projects</p>
-        <p class="sg-lab">Projects</p>
+      <div class="sg-item-box">
+        <i class="fa fa-code c-2"></i>
+        <p class="sg-val">12+ Projects</p>
+        <p class="sg-label">Work Done</p>
       </div>
 
-      <div class="sg-box">
-        <i class="fa fa-paint-brush gren-ic"></i>
-        <p class="sg-num">7</p>
-        <p class="sg-lab">UI Designs</p>
+      <div class="sg-item-box">
+        <i class="fa fa-paint-brush c-3"></i>
+        <p class="sg-val">7</p>
+        <p class="sg-label">UI Designs</p>
       </div>
 
-      <div class="sg-box">
-        <i class="fa fa-certificate gold-ic"></i>
-        <p class="sg-num">97%</p>
-        <p class="sg-lab">Satisfaction</p>
+      <div class="sg-item-box">
+        <i class="fa fa-certificate c-4"></i>
+        <p class="sg-val">97%</p>
+        <p class="sg-label">Satisfaction</p>
       </div>
 
     </div>

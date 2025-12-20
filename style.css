@@ -536,7 +536,7 @@ body {
   color: var(--second-bg-color);
 }
 
-/* Contact Section */
+/* Contact Section *
 .contact {
     padding: 10rem 9%;
     background: var(--second-bg-color);
@@ -613,6 +613,289 @@ body {
     background: var(--gradient-color);
     color: var(--bg-color);
     transform: translateY(-3px);
+}*/
+/* Contact Section */
+.contact {
+    padding: 10rem 9%;
+    background: var(--second-bg-color);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Left Message Box */
+.contact-message {
+    background: rgba(24, 247, 184, 0.1);
+    border-radius: 20px;
+    padding: 4rem;
+    border: 2px solid rgba(24, 247, 184, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+}
+
+.message-icon {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-message h3 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.message-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.message-text p {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 3px solid var(--main-color);
+}
+
+.message-text p i {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    min-width: 30px;
+    padding-top: 2px;
+}
+
+/* Contact Info Squares */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.contact-square {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
+    justify-content: center;
+}
+
+.contact-square:hover {
+    transform: translateY(-5px);
+    background: rgba(24, 247, 184, 0.1);
+    border-color: var(--main-color);
+    box-shadow: 0 10px 20px rgba(24, 247, 184, 0.1);
+}
+
+.square-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(24, 247, 184, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.square-icon i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.square-content h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.square-content p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+/* Social Square */
+.social-square {
+    grid-column: span 2;
+    min-height: 180px;
+}
+
+.square-social {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.square-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.square-social a:hover {
+    background: var(--gradient-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* Tooltip on hover */
+.square-social a::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.square-social a:hover::after {
+    opacity: 1;
+}
+
+/* Specific icon colors on hover */
+.square-social a.linkedin-link:hover {
+    background: #0077b5;
+    color: white;
+}
+
+.square-social a.linktree-link:hover {
+    background: #40e09e;
+    color: white;
+}
+
+.square-social a:nth-child(1):hover {
+    background: #0088cc;
+    color: white;
+}
+
+.square-social a:nth-child(2):hover {
+    background: #333;
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .contact-message {
+        order: 2;
+        margin-top: 3rem;
+    }
+    
+    .contact-info {
+        order: 1;
+    }
+    
+    .contact {
+        padding: 8rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-square {
+        grid-column: span 1;
+    }
+    
+    .square-social {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .contact-message {
+        padding: 3rem;
+    }
+    
+    .contact-message h3 {
+        font-size: 2.4rem;
+    }
+    
+    .message-text p {
+        font-size: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-square {
+        padding: 2rem;
+        min-height: 180px;
+    }
+    
+    .square-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .square-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .square-content h4 {
+        font-size: 1.6rem;
+    }
+    
+    .square-content p {
+        font-size: 1.4rem;
+    }
+    
+    .square-social {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .square-social a {
+        width: 45px;
+        height: 45px;
+        font-size: 2rem;
+    }
 }
 /* footer */
 

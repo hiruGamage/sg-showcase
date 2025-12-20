@@ -703,39 +703,38 @@ body {
     font-size: 14px;
     pointer-events: none;
 }
-
 .footer {
     background: #000;
-    padding: 12px 16px;
     color: #fff;
+    padding: 18px 14px;
     font-size: 13px;
 }
 
-/* Layout bar */
+/* ===== MOBILE FIRST ===== */
 .footer-bar {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: auto;
-    white-space: nowrap;
+    gap: 14px;
+    text-align: center;
 }
 
-/* Left */
-.footer-left .back-top {
+/* Force Back to Top center & size on mobile */
+.footer-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.back-top {
+    font-size: 24px;
+    line-height: 1;
+    display: inline-block;
     color: #00c6ff;
-    font-size: 18px;
     text-decoration: none;
 }
 
-/* Center navigation */
-.footer-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    overflow-x: auto;
-}
-
+/* Navigation */
 .footer-nav {
     display: flex;
     align-items: center;
@@ -743,6 +742,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
 .footer-nav a {
@@ -757,68 +757,51 @@ body {
 
 .footer-nav .dot {
     color: #666;
-    pointer-events: none;
 }
 
-/* Right text */
+/* Text */
 .footer-right p {
-    margin: 2px 0;
+    margin: 3px 0;
     font-size: 12px;
     color: #ccc;
-    text-align: right;
 }
 
 .footer-right strong {
     color: #00c6ff;
-    font-weight: 600;
 }
 
-/* Animated heart */
-.heart {
-    display: inline-block;
-    margin-left: 6px;
-    animation: heartbeat 1.6s infinite ease-in-out;
-}
+/* ===== PC / DESKTOP ONLY ===== */
+@media (min-width: 768px) {
 
-/* Animated coffee */
-.coffee {
-    display: inline-block;
-    margin-left: 4px;
-    animation: steam 2.5s infinite ease-in-out;
-}
+    .footer-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: auto;
+        text-align: left;
+    }
 
-/* Heartbeat animation */
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
+    /* Left: Back to Top */
+    .footer-left {
+        width: auto;
+        justify-content: flex-start;
     }
-    25% {
-        transform: scale(1.2);
-    }
-    50% {
-        transform: scale(1);
-    }
-    75% {
-        transform: scale(1.15);
-    }
-}
 
-/* Coffee steam animation */
-@keyframes steam {
-    0%, 100% {
-        transform: translateY(0);
-        opacity: 1;
+    .back-top {
+        font-size: 18px;
     }
-    50% {
-        transform: translateY(-3px);
-        opacity: 0.7;
-    }
-}
 
-/* Mobile fine-tune */
-@media (max-width: 768px) {
-    .footer-right p {
-        font-size: 11px;
+    /* Center: Navigation */
+    .footer-center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Right: Text */
+    .footer-right {
+        text-align: right;
     }
 }
 /* ---------------------------------------------------------- */

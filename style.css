@@ -614,6 +614,7 @@ body {
     color: var(--bg-color);
     transform: translateY(-3px);
 }*/
+
 /* Contact Section */
 .contact {
     padding: 10rem 9%;
@@ -623,80 +624,29 @@ body {
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: 8rem;
     max-width: 1200px;
     margin: 0 auto;
     align-items: start;
 }
 
-/* Left Message Box */
-.contact-message {
-    background: rgba(24, 247, 184, 0.1);
-    border-radius: 20px;
-    padding: 4rem;
-    border: 2px solid rgba(24, 247, 184, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    height: fit-content;
-}
-
-.message-icon {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.contact-message h3 {
-    font-size: 2.8rem;
-    color: var(--main-color);
-    text-align: center;
-    margin-bottom: 3rem;
-    font-weight: 600;
-}
-
-.message-text {
+/* Left side: Contact Squares */
+.contact-squares-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-
-.message-text p {
-    font-size: 1.6rem;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    border-left: 3px solid var(--main-color);
-}
-
-.message-text p i {
-    font-size: 2.4rem;
-    color: var(--main-color);
-    min-width: 30px;
-    padding-top: 2px;
-}
-
-/* Contact Info Squares */
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
 .contact-square {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    padding: 2.5rem;
+    padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    min-height: 200px;
-    justify-content: center;
+    gap: 2rem;
+    min-height: 100px;
 }
 
 .contact-square:hover {
@@ -707,25 +657,25 @@ body {
 }
 
 .square-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: rgba(24, 247, 184, 0.1);
-    border-radius: 50%;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    flex-shrink: 0;
 }
 
 .square-icon i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--main-color);
 }
 
 .square-content h4 {
     font-size: 1.8rem;
     color: var(--main-color);
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
@@ -735,20 +685,28 @@ body {
     line-height: 1.4;
 }
 
-/* Social Square */
-.social-square {
-    grid-column: span 2;
-    min-height: 180px;
-}
-
-.square-social {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+/* Connect with me (NO SQUARE - Free in background) */
+.connect-free {
     margin-top: 1rem;
+    padding: 2rem 0;
+    text-align: center;
 }
 
-.square-social a {
+.connect-free h4 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.connect-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.connect-icons a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -762,14 +720,14 @@ body {
     position: relative;
 }
 
-.square-social a:hover {
+.connect-icons a:hover {
     background: var(--gradient-color);
     color: var(--bg-color);
-    transform: scale(1.1);
+    transform: translateY(-3px);
 }
 
 /* Tooltip on hover */
-.square-social a::after {
+.connect-icons a::after {
     content: attr(title);
     position: absolute;
     bottom: -40px;
@@ -787,95 +745,125 @@ body {
     z-index: 10;
 }
 
-.square-social a:hover::after {
+.connect-icons a:hover::after {
     opacity: 1;
 }
 
-/* Specific icon colors on hover */
-.square-social a.linkedin-link:hover {
-    background: #0077b5;
-    color: white;
+/* Right side: Message with quote style */
+.contact-message {
+    background: rgba(24, 247, 184, 0.05);
+    border-radius: 20px;
+    padding: 4rem;
+    border-left: 4px solid var(--main-color);
+    position: relative;
+    overflow: hidden;
 }
 
-.square-social a.linktree-link:hover {
-    background: #40e09e;
-    color: white;
+.contact-message::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(24, 247, 184, 0.1) 0%, transparent 100%);
+    border-radius: 0 0 0 100px;
 }
 
-.square-social a:nth-child(1):hover {
-    background: #0088cc;
-    color: white;
+.quote-icon {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.square-social a:nth-child(2):hover {
-    background: #333;
-    color: white;
+.message-content h3 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.message-content h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--main-color);
+    border-radius: 2px;
+}
+
+.quote-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.quote-line {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    position: relative;
+    padding: 0 2rem;
+    font-style: italic;
+}
+
+.quote-line i.bx-bxs-quote-left {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    font-size: 2.4rem;
+    color: var(--main-color);
+    opacity: 0.7;
+}
+
+.quote-line i.bx-bxs-quote-right {
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    font-size: 2.4rem;
+    color: var(--main-color);
+    opacity: 0.7;
 }
 
 /* Mobile Responsive */
 @media (max-width: 992px) {
     .contact-container {
         grid-template-columns: 1fr;
-        gap: 4rem;
-    }
-    
-    .contact-message {
-        order: 2;
-        margin-top: 3rem;
-    }
-    
-    .contact-info {
-        order: 1;
+        gap: 5rem;
     }
     
     .contact {
         padding: 8rem 5%;
     }
-}
-
-@media (max-width: 768px) {
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
     
-    .social-square {
-        grid-column: span 1;
-    }
-    
-    .square-social {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+    /* On mobile: Keep squares on left, message on right visually */
+    .contact-squares-container {
+        order: 2;
     }
     
     .contact-message {
-        padding: 3rem;
-    }
-    
-    .contact-message h3 {
-        font-size: 2.4rem;
-    }
-    
-    .message-text p {
-        font-size: 1.5rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+        order: 1;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .contact-square {
-        padding: 2rem;
-        min-height: 180px;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        min-height: 90px;
     }
     
     .square-icon {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     
     .square-icon i {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .square-content h4 {
@@ -886,14 +874,55 @@ body {
         font-size: 1.4rem;
     }
     
-    .square-social {
-        grid-template-columns: repeat(2, 1fr);
+    .contact-message {
+        padding: 3rem;
+    }
+    
+    .message-content h3 {
+        font-size: 2.4rem;
+    }
+    
+    .quote-line {
+        font-size: 1.6rem;
+        padding: 0 1.5rem;
+    }
+    
+    .connect-icons {
         gap: 1.5rem;
     }
     
-    .square-social a {
+    .connect-icons a {
         width: 45px;
         height: 45px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-square {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .square-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+    }
+    
+    .connect-free h4 {
+        font-size: 1.8rem;
+    }
+    
+    .quote-line {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .quote-line i.bx-bxs-quote-left,
+    .quote-line i.bx-bxs-quote-right {
         font-size: 2rem;
     }
 }

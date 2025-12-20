@@ -909,15 +909,16 @@ body {
 .footer {
     margin-top: auto;
 }
+
 /* ---------------------------------------------------------- */
 
-/* -------1199px------- */
+/* -------1199px------- *
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
   }
-}
-/* -------990px------- */
+} */
+/* -------990px------- *
 @media (max-width: 991px) {
   .header {
     padding: 2rem 3%;
@@ -934,8 +935,8 @@ body {
   .footer {
     padding: 2rem 4%;
   }
-}
-/* -------767px------- */
+} */
+/* -------767px------- 
 @media (max-width: 768px) {
   #menu-icon {
     display: block;
@@ -1025,4 +1026,4 @@ body {
   }
 }
 
-
+*/

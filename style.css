@@ -706,7 +706,7 @@ body {
 .footer {
     background: #000;
     color: #fff;
-    padding: 18px 14px;
+    padding: 16px 12px;
     font-size: 13px;
 }
 
@@ -715,11 +715,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     text-align: center;
 }
 
-/* Force Back to Top center & size on mobile */
+/* Back to Top centered & correct size on mobile */
 .footer-left {
     width: 100%;
     display: flex;
@@ -727,17 +727,22 @@ body {
 }
 
 .back-top {
-    font-size: 24px;
+    font-size: 24px;       /* visible size on mobile */
     line-height: 1;
-    display: inline-block;
     color: #00c6ff;
     text-decoration: none;
+    display: inline-block;
 }
 
 /* Navigation */
+.footer-center {
+    width: 100%;
+    overflow-x: auto;      /* prevent wrapping on narrow screens */
+}
+
 .footer-nav {
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;      /* prevent 2-line wrapping */
     gap: 8px;
     list-style: none;
     margin: 0;
@@ -759,9 +764,9 @@ body {
     color: #666;
 }
 
-/* Text */
+/* Footer text */
 .footer-right p {
-    margin: 3px 0;
+    margin: 2px 0;
     font-size: 12px;
     color: #ccc;
 }
@@ -789,14 +794,16 @@ body {
     }
 
     .back-top {
-        font-size: 18px;
+        font-size: 18px;  /* smaller on PC */
     }
 
     /* Center: Navigation */
     .footer-center {
+        width: auto;
         flex: 1;
         display: flex;
         justify-content: center;
+        overflow: visible;
     }
 
     /* Right: Text */

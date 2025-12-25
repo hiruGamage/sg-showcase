@@ -228,6 +228,7 @@ body {
   font-size: 1.6rem;
   margin: 2rem 0 4rem;
 }
+
 /*Stats */
 .stats-container {
     max-width: 1200px;
@@ -398,6 +399,7 @@ body {
         font-size: 13px;
     }
 }
+
 /* skills */
 .skills {
   padding-bottom: 7rem;
@@ -535,6 +537,7 @@ body {
   font-size: 2rem;
   color: var(--second-bg-color);
 }
+
 
 /* Contact Section */
 .contact {

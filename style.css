@@ -734,7 +734,44 @@ body {
     transform: translateY(-0.5rem);
     box-shadow: 0 1rem 2rem rgba(24, 247, 184, 0.3);
 }
+/* Template Status */
+.project-status.template {
+    background: rgba(147, 51, 234, 0.9); /* Purple color for template */
+    color: white;
+    border: 2px solid rgba(147, 51, 234, 0.5);
+    animation: templateGlow 3s infinite alternate;
+}
 
+.project-status.template i {
+    color: white;
+    animation: floatTemplate 2s ease-in-out infinite;
+}
+
+/* Template glow animation */
+@keyframes templateGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(147, 51, 234, 0.8);
+    }
+}
+
+/* Template icon floating animation */
+@keyframes floatTemplate {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Template specific styles for hover effects */
+.project-status.template:hover {
+    background: rgba(147, 51, 234, 1);
+    transform: scale(1.05);
+}
 
 /* Contact Section */
 .contact {

@@ -260,7 +260,7 @@ body {
 .skills-box .progress .bar {
   height: 2.5rem;
   border-radius: 0.6rem;
-  border: 0.2rem solid var(--skills-color);
+  border: 0.2rem solid var(--main-color);
   padding: 0.5rem;
   margin: 1rem 0;
 }
@@ -300,6 +300,7 @@ body {
 .skills-column:nth-child(2) .skills-box .progress:nth-child(5) .bar span {
   width: 35%;
 }
+
 
 /*Stats */
 .stats-container {
@@ -1064,6 +1065,7 @@ body {
     font-weight: 400;
   }
 }
+
 
 
 

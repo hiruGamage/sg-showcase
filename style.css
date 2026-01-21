@@ -129,11 +129,29 @@ body {
   color: var(--text-color);
   display: none;
 }
-.home {
+
+/*.home {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}*/
+.home {
+  min-height: 100vh;
+  padding: 10rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* 🔥 BACKGROUND IMAGE */
+  background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+    url("assets/HBG.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .home-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -1222,6 +1240,7 @@ body {
     font-weight: 400;
   }
 }
+
 
 
 
